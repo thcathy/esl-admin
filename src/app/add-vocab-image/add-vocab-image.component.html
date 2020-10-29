@@ -1,0 +1,18 @@
+<table style="display: block;">
+  <tr>
+    <td *ngFor="let image of images" (click)="selectImage($event, image)"
+        style="display: inline-block; border: thin solid black; ">
+      <img [src]="image.url | safeURL" />
+    </td>
+  </tr>
+</table>
+<h3>{{word}}</h3>
+<button *ngIf="images && images.length > 0" (click)="retrieveImages(word)">more...</button>
+<button *ngIf="images && images.length > 0" (click)="saveImages()">save ({{savedImage}})</button>
+<button (click)="markDone()">done</button>
+
+<ul>
+  <li *ngFor="let word of words">
+    <button (click)="retrieveImages(word)">{{word}}</button>
+  </li>
+</ul>

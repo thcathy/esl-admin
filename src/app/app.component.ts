@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'esl-admin';
+
+  onPasswordFocusOut(event: any): void {
+    localStorage.setItem('password', event.target.value);
+  }
 }
