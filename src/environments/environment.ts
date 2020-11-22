@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiHost: 'http://Timmys-MacBook-Pro.local:8380'
+  apiHost: 'http://hp-g42.local:8080'
 };
 
 /*
